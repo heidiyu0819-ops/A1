@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Achievement</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  /* 頁面切換核心 */
+  .page {
+    display: none;
+    height: 100%;
+  }
+  .page.active {
+    display: block;
+  }
+
+  /* 頂部導航 */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-bottom: 1px solid #000;
+  }
+  .header span {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  /* 佈局 */
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100% - 38px);
+  }
+  .col {
+    border-right: 1px solid #000;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .col::-webkit-scrollbar {
+    display: none; /* 滾動條 */
+  }
+  .col:last-child {
+    border-right: none;
+  }
+
+  /* 內容樣式 */
+  img {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .label {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  p {
+    margin-bottom: 12px;
+  }
+  .back {
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* 單列佈局 */
+  @media (max-width: 768px) {
+    html, body {
+      overflow: auto; 
+    }
+    .columns {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .col {
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #000;
+      overflow: visible;
+    }
+  }
+
+  
+  .side-by-side {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0;
+  }
+  .side-by-side .text-col {
+    flex: 1;
+  }
+  .side-by-side .img-col {
+    flex: 1;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- 1. Main Page -->
+<div class="page active" id="main">
+  <div class="header">
+    <span class="goAbout">About Me</span>
+    <span class="goWorks">Visual Works</span>
+    <span>Achievement</span>
+  </div>
+  <div class="columns">
+    <div class="col">
+      <img src="images/image.png">
+      <div class="label">Introduction</div>
+      <p>My love for visual aesthetics started early - when I was a kid, I would spend hours drawing with ink and paint, fascinated by how lines and colors could turn a blank paper into a little something or feelings of my own. That early curiocity about beauty and composition laid the foundation for everything I do today.</p>
+      <p>Working across photography, design, and print, I aim for clarity and intentionality in every project.</p>
+    </div>
+    <div class="col">
+      <img src="images/IMG_8363.jpg">
+      <div class="label">High school Art Work</div>
+      <div class="side-by-side">
+        <div class="text-col">
+          <p>For me, art is a continuous thread—from childhood doodles to professional visuals, it’s all about seeing the extraordinary in the ordinary, and translating that into something others can feel.</p>
+        </div>
+        <div class="img-col">
+          <img src="images/IMG_8364.jpg" alt="images">
+          <img src="images/IMG_8367.jpg" alt="images">
+        </div>
+      </div>
+      <p>Later, with my phone in hand, I grew obsessed with preserving traces of beauty through my camera. This sparked a deep interest in artistic creation—I found that both photography and graphic design were perfect outlets for me to channel and express all my ideas. It was not until last year that, with my own savings, I bought my very first camera.</p>
+      <img src="images/IMG_3968.jpg" alt="images">
+      <p>Each frame explores stillness and the beauty of unplanned moments.</p>
+    </div>
+    <div class="col">
+      <div class="label"></div>
+      <p>My biggest achievement is turning my long-lasting love for art and colors into a real visual practice.From drawing as a kid to self-funding my first camera, I have built my own creative voice through photography, post-processing, and design.</p>
+      <div class="label" style="margin-top:24px"></div>
+      <p>
+I have always been someone who expresses emotions through colors and tones.Art, creativity, and visual aesthetics have been deeply rooted in me since I was little.Over time, this love gradually led me to photography—a medium where I can truly translate my feelings into images. Whether I am capturing portraits, events, architecture, landscapes, or still life, I approach each scene with a strong sense of color and mood.After shooting, I take charge of post-processing, retouching, and color grading to tailor a unique style that fits the story and emotion of every photo. To me, photography is not just about taking pictures.</p>
+      <div class="label" style="margin-top:24px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. About 詳情頁 -->
+<div class="page" id="about">
+  <div class="header">
+    <span class="backMain">Project</span>
+    <span class="goWorks">Visual Works</span>
+    <span>My Achievement</span>
+  </div>
+  <div class="columns">
+    <!-- 左第一栏：項目圖片 + 小标题 -->
+    <div class="col">
+      <div class="label"></div>
+      <p>Below are the events I have photographed,where I preserved precious moments and created visual memories for each occasion.</p>
+      <div style="text-align: right; color: #666; font-size: 14px; margin-bottom: 8px;">
+        - 葵青慶回歸
+      </div>
+      <img src="images/HLP_9002.jpg" style="width: 100%; margin-bottom: 12px;">
+      <div style="display: flex; gap: 12px;">
+          <img src="images/HLP_9035.jpg" style="width: 50%;">
+          <img src="images/HLP_9044.jpg" style="width: 50%;">
+      </div>
+      <div style="display: flex; gap: 12px; margin-top: 12px;">
+          <img src="images/HLP_9048.jpg" style="width: 50%;">
+          <img src="images/HLP_9056.jpg" style="width: 50%;">
+      </div>
+      <div style="text-align: right; color: #666; font-size: 14px; margin-bottom: 8px; margin-top:20px;">
+        - 香港星耀紫荊慶回歸紅館晚會
+      </div>
+      <img src="images/IMG_8373.jpg" style="width: 100%; margin-bottom: 12px;">
+      <img src="images/Snapseed.jpg" style="width: 100%; margin-bottom: 12px;">
+      <div style="text-align: right; color: #666; font-size: 14px; margin-bottom: 8px; margin-top:20px;">
+        - TAK GRADUATION CEREMONY
+      </div>
+      <img src="images/1K3A6331.jpg" style="width: 100%; margin-bottom: 12px;">
+      <div style="display: flex; gap: 12px;">
+         <img src="images/1K3A6336.jpg" style="width: 50%;">
+        <img src="images/1K3A6455.jpg" style="width: 50%;">
+      </div>
+      <img src="images/1K3A6527.jpg" style="width: 100%; margin-bottom: 12px;">
+      <div style="display: flex; gap: 12px;">
+         <img src="images/1K3A6547.jpg" style="width: 50%;">
+        <img src="images/1K3A6577.jpg" style="width: 50%;">
+      </div>
+    </div>
+    <!-- 中间分栏：保持主頁面 -->
+    <div class="col">
+      <img src="images/IMG_8363.jpg">
+      <div class="label">High school Art Work</div>
+      <div class="side-by-side">
+        <div class="text-col">
+          <p>For me, art is a continuous thread—from childhood doodles to professional visuals, it’s all about seeing the extraordinary in the ordinary, and translating that into something others can feel.</p>
+        </div>
+        <div class="img-col">
+          <img src="images/IMG_8364.jpg" alt="images">
+          <img src="images/IMG_8367.jpg" alt="images">
+        </div>
+      </div>
+      <p>Later, with my phone in hand, I grew obsessed with preserving traces of beauty through my camera. This sparked a deep interest in artistic creation—I found that both photography and graphic design were perfect outlets for me to channel and express all my ideas. It was not until last year that, with my own savings, I bought my very first camera.</p>
+      <img src="images/IMG_3968.jpg" alt="images">
+      <p>Each frame explores stillness and the beauty of unplanned moments.</p>
+    </div>
+    <!-- 右边分栏：保持主頁面 -->
+    <div class="col">
+      <div class="label">Achievement</div>
+      <p>My biggest achievement is turning my long-lasting love for art and colors into a real visual practice.From drawing as a kid to self-funding my first camera, I have built my own creative voice through photography, post-processing, and design.</p>
+      <div class="label" style="margin-top:24px"></div>
+      <p>I have always been someone who expresses emotions through colors and tones.Art, creativity, and visual aesthetics have been deeply rooted in me since I was little.Over time, this love gradually led me to photography—a medium where I can truly translate my feelings into images. Whether I am capturing portraits, events, architecture, landscapes, or still life, I approach each scene with a strong sense of color and mood.After shooting, I take charge of post-processing, retouching, and color grading to tailor a unique style that fits the story and emotion of every photo. To me, photography is not just about taking pictures.</p>
+      <div class="label" style="margin-top:24px"></div>
+      <div style="margin-top:30px">
+        <span class="backMain back">← Back</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3. Visual Works 詳情頁 -->
+<div class="page" id="visualWorks">
+  <div class="header">
+    <span class="backMain">Back</span>
+    <span>Visual Works</span>
+    <span>My Achievement</span>
+  </div>
+  <div class="columns">
+    <!-- 左分栏：保持主頁面（About Me 部分） -->
+    <div class="col">
+      <img src="images/image.png">
+      <div class="label">Introduction</div>
+      <p>My love for visual aesthetics started early - when I was a kid, I would spend hours drawing with ink and paint, fascinated by how lines and colors could turn a blank paper into a little something or feelings of my own. That early curiocity about beauty and composition laid the foundation for everything I do today.</p>
+      <p>Working across photography, design, and print, I aim for clarity and intentionality in every project.</p>
+    </div>
+    <!-- 中間分栏：Visual Works 詳情 -->
+    <div class="col">
+      <!-- 第一部分：Portrait -->
+      <div class="label">Portrait</div>
+      <p style="font-size:14px; color:#666; margin:0 0 20px 0;">2025 - 2026</p>
+      <p style="font-size:24px; line-height:1.4; margin:0 0 30px 0;">
+        Photograph<br>
+        people not for<br>
+        how they <strong>look</strong>,<br>
+        but for how they<br>
+        <strong>feel</strong>.
+      </p>
+      <!-- 第一组拼圖 -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; position: relative; height: 420px; margin-bottom: 40px;">
+        <img src="images/HLP_9950.jpg" style="width: 85%; height: 200px; object-fit: cover; grid-column: 1 / 2; grid-row: 1 / 2;">
+        <img src="images/HLP_0209.jpg" style="width: 70%; height: 180px; object-fit: cover; grid-column: 2 / 3; grid-row: 1 / 2; margin-left: auto;">
+        <img src="images/HLP_0061.jpg" style="width: 85%; height: 220px; object-fit: cover; grid-column: 1 / 2; grid-row: 2 / 3; margin-top: -20px;">
+        <img src="images/IMGL9054.jpg" style="width: 90%; height: 240px; object-fit: cover; grid-column: 2 / 3; grid-row: 2 / 3; margin-top: -40px;">
+      </div>
+
+      <!-- 第二部分：Daily Life -->
+      <p style="font: size 23px; text-align: right; line-height:1.4; margin:0 0 30px 0;">
+        Ensure the photos<br>
+        are tailored to fit<br>
+        their intended style<br>
+        and purpose.
+      </p>
+      <!-- 第二组拼圖 -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; position: relative; height: 600px; margin-bottom: 40px;">
+        <img src="images/DSC02013.jpg" style="width: 100%; height: 300px; object-fit: cover; grid-column: 1 / 2; grid-row: 1 / 2;">
+        <img src="images/DSC02035.jpg" style="width: 80%; height: 200px; object-fit: cover; grid-column: 2 / 3; grid-row: 1 / 2; margin-left: auto;">
+        <img src="images/DSC01962.jpg" style="width: 100%; height: 200px; object-fit: cover; grid-column: 1 / 2; grid-row: 2 / 3; margin-top: -50px;">
+        <img src="images/DSC01993.jpg" style="width: 100%; height: 300px; object-fit: cover; grid-column: 2 / 3; grid-row: 2 / 3; margin-top: -100px;">
+        <img src="images/DSC02031.jpg" style="width: 90%; height: 200px; object-fit: cover; grid-column: 1 / 2; grid-row: 3 / 3; margin-top: -80px;">
+      </div>
+
+      <!-- 第三部分：Architecture & Landscape -->
+      <p style="font: size 23px; line-height:1.4; margin:0 0 30px 0;">
+      <br>
+      </br>
+      <br>
+      </br>
+
+        When it comes to shooting
+        <br><strong>architecture, landscapes,</strong><br>
+        the approach is entirely<br>
+        different.
+      </p>
+      <!-- 第三组拼圖 -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; position: relative; height: 800px; margin-bottom: 40px;">
+        <img src="images/IMG_4198.JPG" style="width: 90%; height: 190px; object-fit: cover; grid-column: 1 / 2; grid-row: 1 / 2;">
+        <img src="images/IMG_6286.JPG" style="width: 100%; height: 80px; object-fit: cover; grid-column: 2 / 3; grid-row: 1 / 2; margin-left: auto;">
+        <img src="images/IMG_4197.JPG" style="width: 90%; height: 190px; object-fit: cover; grid-column: 3 / 4; grid-row: 1 / 2; margin-left: auto;">
+        <img src="images/583C09F8-FBF7-4D08-A2B8-656BF6ABD237.JPG" style="width: 90%; height: 90px; object-fit: cover; grid-column: 2 / 3; grid-row: 1 / 2; margin-top: 90px;">
+        <img src="images/DSC01891.jpg" style="width: 150%; height: 120px; object-fit:cover; grid-column: 1 / 2; grid-row: 1 / 2; margin-top: 210px;">
+        <img src="images/DSC01920.jpg" style="width: 90%; height: 200px; object-fit:fill; grid-column: 3 / 4; grid-row: 1 /2; margin-top: 210px;">
+        <img src="images/DSC01806.jpg" style="width: 150%; height: 120px; object-fit: cover; grid-column: 1 / 2; grid-row: 3/ 4; margin-top: 170px;">
+        <img src="images/IMG_8374.JPG" style="width: 90%; height: 190px; object-fit: cover; grid-column: 2 / 3; grid-row: 3/ 4; margin-top: -90px;">
+        <img src="images/DSC00431.jpg" style="width: 90%; height: 190px; object-fit: cover; grid-column: 3 / 4; grid-row: 3 / 4; margin-top: -50px;">
+      </div>
+    </div>
+
+    <!-- 右分栏：保持主頁面（My Achievement 文字部分） -->
+    <div class="col">
+      <div class="label">Achievement</div>
+      <p>My biggest achievement is turning my long-lasting love for art and colors into a real visual practice.From drawing as a kid to self-funding my first camera, I have built my own creative voice through photography, post-processing, and design.</p>
+      <div class="label" style="margin-top:24px"></div>
+      <p>I have always been someone who expresses emotions through colors and tones.Art, creativity, and visual aesthetics have been deeply rooted in me since I was little.Over time, this love gradually led me to photography—a medium where I can truly translate my feelings into images. Whether I am capturing portraits, events, architecture, landscapes, or still life, I approach each scene with a strong sense of color and mood.After shooting, I take charge of post-processing, retouching, and color grading to tailor a unique style that fits the story and emotion of every photo. To me, photography is not just about taking pictures.</p>
+      <div class="label" style="margin-top:24px"></div>
+      <div style="margin-top:30px">
+        <span class="backMain back">← Back</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+  const main = document.getElementById('main')
+  const about = document.getElementById('about')
+  const visualWorks = document.getElementById('visualWorks')
+
+  // About 頁面跳轉
+  document.querySelector('.goAbout').onclick = () => {
+    main.classList.remove('active')
+    about.classList.add('active')
+    visualWorks.classList.remove('active') 
+  }
+
+  // Visual Works 頁面跳轉
+  document.querySelectorAll('.goWorks').forEach(el => { 
+    el.onclick = () => {
+      main.classList.remove('active')
+      about.classList.remove('active')
+      visualWorks.classList.add('active') 
+    }
+  })
+
+  // 返回主頁面
+  document.querySelectorAll('.backMain').forEach(el => {
+    el.onclick = () => {
+      about.classList.remove('active')
+      visualWorks.classList.remove('active')
+      main.classList.add('active')
+    }
+  })
+</script>
+</body>
+</html>

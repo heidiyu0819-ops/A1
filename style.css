@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #fff;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* 页面切换 */
+.page {
+  display: none;
+  height: 100%;
+}
+.page.active {
+  display: block;
+}
+
+/* 顶部导航 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #000;
+}
+.header span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* 三栏布局 */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: calc(100% - 38px);
+}
+.col {
+  border-right: 1px solid #000;
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.col::-webkit-scrollbar {
+  display: none;
+}
+.col:last-child {
+  border-right: none;
+}
+
+/* 内容样式 */
+img {
+  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+}
+.label {
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+p {
+  margin-bottom: 12px;
+}
+
+/* 返回按钮样式 */
+.backMain {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+.backMain:hover {
+  opacity: 0.6;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  .columns {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .col {
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #000;
+    overflow: visible;
+  }
+}
